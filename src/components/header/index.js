@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import theme from '../../styles/theme';
@@ -8,7 +9,6 @@ import Profile from './profile';
 import RoleSelector from './roleSelector';
 import Metric from './metric';
 
- console.log(theme);
 const StyledHeader= styled.div`
                     display: flex;
                     flex-direction: row;
@@ -26,7 +26,12 @@ export default class Header extends Component {
     return (<StyledHeader>
                 <Profile />
                  <RoleSelector/>
-                 <Metric />
+                 <Metric onOpenMetrics={this.props.onOpenMetrics}/>
            </StyledHeader>);
   }
+}
+
+
+Header.propTypes={
+  onOpenMetrics: PropTypes.func.isRequired
 }

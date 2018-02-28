@@ -12,6 +12,7 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   text-transform: uppercase;
   background-color: ${colors.dark};
+  color: ${colors.light};
 }`;
 
 export default theme

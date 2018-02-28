@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
@@ -15,6 +16,11 @@ const Button = styled.button`
 export default class Metric extends Component {
 
   render() {
-    return (<Button>Add metric</Button>);
+    return (<Button onClick={this.props.onOpenMetrics}>Add metric</Button>);
   }
+}
+
+
+Metric.propTypes={
+  onOpenMetrics: PropTypes.func.isRequired
 }
