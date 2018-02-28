@@ -9,8 +9,8 @@ const theme = createTheme(...Object.keys(colors))
 
 injectGlobal`
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  text-transform: uppercase;
+  font-family: ${fonts.font};
+  text-transform: ${fonts.transformation};
   background-color: ${colors.dark};
   color: ${colors.light};
 }`;
