@@ -7,20 +7,17 @@ import '../node_modules/highlight.js/styles/atom-one-dark.css';
 import Routes from './routes';
 import {loadConcepts} from './actions/conceptActions';
 import {ThemeProvider} from 'styled-components';
+import colors from './styles/colors'
 
 const store=configureStore();
 
-// Define what props.theme will look like
-const theme = {
-  main: 'mediumseagreen'
-};
 
 //Dispatch Actions
 store.dispatch(loadConcepts());
 
 ReactDOM.render(
   (<Provider store={store}>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={colors}>
     <Routes />
     </ThemeProvider>
   </Provider>),
